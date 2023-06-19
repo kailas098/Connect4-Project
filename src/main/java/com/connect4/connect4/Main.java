@@ -14,7 +14,7 @@ public class Main extends Application
 	private Controller controller;
 
 	@Override
-	public void start(Stage stage) throws Exception
+	public void start(@SuppressWarnings("exports") Stage stage) throws Exception
 	{
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("activity.fxml"));
 		GridPane rootGridPane = loader.load();

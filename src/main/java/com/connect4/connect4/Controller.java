@@ -36,21 +36,27 @@ public class Controller implements Initializable
 
 	private boolean isPlayerOneTurn = true;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public TextField playerOneName;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public TextField playerTwoName;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public Button setButton;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public GridPane rootGridPane;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public Pane insertedDiscsPane;
 
+	@SuppressWarnings("exports")
 	@FXML
 	public Label playerNameLabel;
 

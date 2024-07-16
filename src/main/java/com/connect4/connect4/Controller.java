@@ -60,7 +60,6 @@ public class Controller implements Initializable
 	@FXML
 	public Label playerNameLabel;
 
-	// this function creates a rectangle with holes and adds it to out 'rootGridPane'.=================================
 	public void createPlayGround()
 	{
 		playerNameLabel.setText(" "); // player name has to be empty when the game begins.
@@ -75,7 +74,6 @@ public class Controller implements Initializable
 		}
 	}
 
-	// this function creates a rectangle with holes in it.=============================================================
 	private Shape gameStructuralGrid()
 	{
 		/*
@@ -106,7 +104,6 @@ public class Controller implements Initializable
 		return rectangleWithHoles;
 	}
 
-	// This method creates columns which can be clicked and inserts disc when clicked. ===============================
 	private List<Rectangle> createClickAbleColumns()
 	{
 		//This list stores all the 'clickable-rectangles'. These are like 7 rectangles objects that responds to mouse events.
@@ -137,7 +134,6 @@ public class Controller implements Initializable
 		return list;
 	}
 
-	// this function inserts discs into both 'structural'->SG and visual 'play-board'->PG.============================
 	private void insertDisc(Disc disc, int col)
 	{
 		// we use this 'row' to update both the grids (SG,PG).
@@ -176,7 +172,6 @@ public class Controller implements Initializable
 		insertedDiscsPane.getChildren().add(disc);
 	}
 
-	// this method declares the winner and ends the game.=============================================================
 	private void gameOver()
 	{
 		String winner = isPlayerOneTurn? player_one : player_two;
@@ -224,7 +219,6 @@ public class Controller implements Initializable
 		createPlayGround();
 	}
 
-	// this method checks if the game has reached winning criteria(i.e. if the combination was made).=================
 	private boolean gameEnded(int cur_row, int col)
 	{
 		// we get the set of positions where the 'disc' can be placed in the mentioned 'col'.
@@ -266,9 +260,6 @@ public class Controller implements Initializable
 							|| checkCombinations(diagonal_1_points);
 	}
 
-	/* this method takes a set which contains the winning coordinates for a specific disc position and checks if ======
-		they are filled, and they are discs of the same player.
-	*/
 	private boolean checkCombinations(List<Point2D> points)
 	{
 		/* we take the set of possible combination set and check if we have a
@@ -298,7 +289,6 @@ public class Controller implements Initializable
 		return false;
 	}
 
-	// this method returns a disc if the 'row' and 'col' values are within the board.==================================
 	private Disc getDiscIfPresent(int row, int col)
 	{
 		if(row>=ROWS || row<0 || col>=COLOUMS || col<0)
